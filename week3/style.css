@@ -1,0 +1,70 @@
+* {
+  color: lightpink;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  color: blue;
+  font-size: 2rem;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Grey Qo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+h2 {
+  color: blueviolet;
+  font-size: 1.6rem;
+  padding: 5px;
+}
+p {
+  color: lightcoral;
+}
+h3 {
+  color: orchid;
+}
+
+.my-class {
+  color: palevioletred;
+}
+
+#my-id {
+  color: silver;
+}
+
+p strong {
+  color: red;
+}
+article {
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  border: 3px dotted rgb(124, 225, 220);
+  padding: 20px;
+}
+p {
+  border: 1px dashed pink;
+  padding: 40px;
+  background-color: rgba(196, 255, 214, 0.416);
+  /* width: 2500px; */
+  /* line-height: 1.7; */
+}
+.headingfont {
+  font-family: "Grey Qo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.bodyfont {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+a {
+  color: aquamarine;
+}
+a:hover {
+  color: blueviolet;
+}
