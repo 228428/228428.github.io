@@ -1,19 +1,21 @@
 body {
-  background-color: #f0edee;
+  background-color: #b6cc71;
 }
+/* the main heading */
 h1 {
-  color: #07393c;
+  color: #7a91d9;
   font-size: 2rem;
   padding: 15px;
 }
 
+/* the questions */
 h2 {
-  color: #07393c;
+  color: #000000;
   font-size: 1.2rem;
   padding: 5px;
 }
 
+/* the answers */
 p {
-  color: #07393c;
+  color: #323232;
 }
-/* #F0EDEE */
