@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+  font-family: "Hind", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body {
+  background-color: #7a91d9;
+}
+
+header {
+  background-color: #b6cc71;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Title Styles */
+.foldit-title {
+  font-family: "Foldit", sans-serif;
+  font-weight: 700; /* Adjust the weight as needed */
+  font-optical-sizing: auto;
+  font-size: 3rem;
+  color: #ffff;
+}
+
+/* Hind Font Classes */
+.hind-light {
+  font-family: "Hind", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.hind-regular {
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hind-medium {
+  font-family: "Hind", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.hind-semibold {
+  font-family: "Hind", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hind-bold {
+  font-family: "Hind", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Headings Styles */
+h2 {
+  font-family: "Handlee", sans-serif;
+  color: #303030;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #b6cc71;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+/* Section Styles */
+section {
+  margin-bottom: 20px;
+}
+
+section p {
+  margin: 10px 0;
+  max-width: 75ch;
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #7a91d9;
+  color: #303030;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
