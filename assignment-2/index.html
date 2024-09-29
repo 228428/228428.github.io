@@ -4,24 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DJ Remix Player</title>
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="media-player-container">
+      <!-- Image above the media player -->
+      <img src="images/remix-banner.jpg" alt="DJ Remix" class="banner" />
+
+      <!-- Media Player -->
       <h1>DJ Remix Player</h1>
       <audio id="mediaPlayer" controls>
-        <source
-          src="dj-remix.mp3"
-          type="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/CHAABI-MAROC-MIX_CHAABI-MIX.mp3"
-        />
+        <source src="dj-remix.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
+
+      <!-- Control Buttons -->
       <div class="controls">
-        <button id="playPauseBtn">Play/Pause</button>
-        <button id="bassBoostBtn">Bass Boost: Off</button>
-        <input type="range" id="volumeSlider" min="0" max="1" step="0.1" />
+        <button id="playPauseBtn">
+          <img src="icons/play-icon.png" alt="Play/Pause" id="playPauseIcon" />
+        </button>
+        <button id="muteBtn">
+          <img src="icons/volume-icon.png" alt="Mute/Unmute" id="muteIcon" />
+        </button>
+        <input
+          type="range"
+          id="volumeSlider"
+          min="0"
+          max="1"
+          step="0.1"
+          title="Volume"
+        />
+        <button id="loopBtn">
+          <img src="icons/loop-icon.png" alt="Loop" id="loopIcon" />
+        </button>
+        <button id="backwardBtn">
+          <img src="icons/backward-icon.png" alt="Backward" id="backwardIcon" />
+        </button>
+        <input
+          type="range"
+          id="progressSlider"
+          min="0"
+          max="100"
+          step="1"
+          title="Progress"
+        />
+        <button id="forwardBtn">
+          <img src="icons/forward-icon.png" alt="Forward" id="forwardIcon" />
+        </button>
       </div>
+
+      <!-- Playlist below the media player -->
+      <div class="playlist">
+        <h2>Playlist</h2>
+        <ul>
+          <li><a href="#" data-src="dj-remix.mp3">DJ Remix Track 1</a></li>
+          <li><a href="#" data-src="dj-remix-2.mp3">DJ Remix Track 2</a></li>
+          <li><a href="#" data-src="dj-remix-3.mp3">DJ Remix Track 3</a></li>
+        </ul>
+      </div>
+
+      <!-- Disco Mode Toggle Button -->
+      <button id="discoModeBtn" class="disco-btn">Disco Mode: Off</button>
     </div>
+
     <script src="scripts.js"></script>
   </body>
 </html>

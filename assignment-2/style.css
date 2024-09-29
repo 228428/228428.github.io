@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background-color 1s ease; /* Transition for disco mode */
+}
+
+.media-player-container {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 400px;
+  transition: background-color 1s ease, box-shadow 1s ease; /* Transition for disco mode */
+}
+
+/* Banner Image above the media player */
+.banner {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #e60073;
+  transition: color 1s ease; /* Smooth color transitions for disco mode */
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.5s ease; /* Smooth transitions for buttons */
+}
+
+button img {
+  width: 30px;
+  height: 30px;
+}
+
+input[type="range"] {
+  width: 100px;
+  cursor: pointer;
+}
+
+/* Playlist styling */
+.playlist {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.playlist h2 {
+  font-size: 18px;
+  color: #e60073;
+  margin-bottom: 10px;
+  transition: color 1s ease;
+}
+
+.playlist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.playlist li {
+  margin-bottom: 10px;
+}
+
+.playlist a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s ease; /* Smooth transitions for playlist links */
+}
+
+.playlist a:hover {
+  color: #e60073;
+  text-decoration: underline;
+}
+
+/* Disco Mode Button */
+.disco-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e60073;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
