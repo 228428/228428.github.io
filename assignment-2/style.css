@@ -20,13 +20,6 @@ body {
   transition: background-color 1s ease, box-shadow 1s ease; /* Transition for disco mode */
 }
 
-/* Banner Image above the media player */
-.banner {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
 h1 {
   font-size: 24px;
   margin-bottom: 20px;

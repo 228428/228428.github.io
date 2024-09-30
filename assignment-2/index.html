@@ -4,30 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DJ Remix Player</title>
+
+    <!-- Using reset.css to ensure styling is consistent across browsers -->
     <link rel="stylesheet" href="reset.css" />
+    <!-- Linking my custom styles -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Linking the script for the media player functionalities -->
     <script src="script.js" defer></script>
   </head>
   <body>
     <div class="media-player-container">
-      <!-- Image above the media player -->
-      <img src="images/remix-banner.jpg" alt="DJ Remix" class="banner" />
+      <!-- Placeholder for a banner image at the top. Need to find the right image later. -->
+      <!-- <img src="images/djimg.png" alt="DJ Remix Banner" class="banner"> -->
+      <!-- didnt add as it was causing a headache -->
 
-      <!-- Media Player -->
+      <!-- Main title for the DJ remix player -->
       <h1>DJ Remix Player</h1>
+
+      <!-- Audio element: this will be the player that users interact with -->
       <audio id="mediaPlayer" controls>
-        <source src="dj-remix.mp3" type="audio/mp3" />
-        Your browser does not support the audio element.
+        <source src="assignemnt2/djmix.mp3" type="audio/mp3" />
       </audio>
 
-      <!-- Control Buttons -->
+      <!-- Control buttons: Play/Pause, Mute, Volume, Loop, Progress, etc. -->
       <div class="controls">
+        <!-- Play/Pause button. Icon changes based on whether the track is playing or paused. -->
         <button id="playPauseBtn">
           <img src="icons/play-icon.png" alt="Play/Pause" id="playPauseIcon" />
         </button>
+
+        <!-- Mute/Unmute button. Volume icon changes when muted. -->
         <button id="muteBtn">
           <img src="icons/volume-icon.png" alt="Mute/Unmute" id="muteIcon" />
         </button>
+
+        <!-- Volume slider, lets users control the volume of the track -->
         <input
           type="range"
           id="volumeSlider"
@@ -36,12 +47,18 @@
           step="0.1"
           title="Volume"
         />
+
+        <!-- Loop button. This will allow looping of the current track -->
         <button id="loopBtn">
           <img src="icons/loop-icon.png" alt="Loop" id="loopIcon" />
         </button>
+
+        <!-- Skip backward button. Moves the track backward by 10 seconds -->
         <button id="backwardBtn">
           <img src="icons/backward-icon.png" alt="Backward" id="backwardIcon" />
         </button>
+
+        <!-- Progress bar: displays the current track's progress -->
         <input
           type="range"
           id="progressSlider"
@@ -50,25 +67,41 @@
           step="1"
           title="Progress"
         />
+
+        <!-- Skip forward button. Moves the track forward by 10 seconds -->
         <button id="forwardBtn">
           <img src="icons/forward-icon.png" alt="Forward" id="forwardIcon" />
         </button>
       </div>
 
-      <!-- Playlist below the media player -->
+      <!-- Playlist section where users can click to change tracks -->
       <div class="playlist">
         <h2>Playlist</h2>
         <ul>
-          <li><a href="#" data-src="dj-remix.mp3">DJ Remix Track 1</a></li>
-          <li><a href="#" data-src="dj-remix-2.mp3">DJ Remix Track 2</a></li>
-          <li><a href="#" data-src="dj-remix-3.mp3">DJ Remix Track 3</a></li>
+          <!-- Placeholder for track 1. Need to add more tracks here . -->
+          <li>
+            <a href="#" data-src="assignemnt2/dj-remix.mp3">DJ Remix Track 1</a>
+          </li>
+          <!-- Placeholder for track 2 -->
+          <li>
+            <a href="#" data-src="assignemnt2/dj-remix-2.mp3"
+              >DJ Remix Track 2</a
+            >
+          </li>
+          <!-- Placeholder for track 3 -->
+          <li>
+            <a href="#" data-src="assignemnt2/dj-remix-3.mp3"
+              >DJ Remix Track 3</a
+            >
+          </li>
         </ul>
       </div>
 
-      <!-- Disco Mode Toggle Button -->
+      <!-- Button to toggle disco mode. Changes the background colors dynamically. -->
       <button id="discoModeBtn" class="disco-btn">Disco Mode: Off</button>
     </div>
 
+    <!-- External JavaScript file for the media player logic -->
     <script src="scripts.js"></script>
   </body>
 </html>
