@@ -26,9 +26,6 @@ const volumeSlider = document.getElementById("volumeSlider");
 // Button to toggle disco mode (background color changes)
 const discoModeBtn = document.getElementById("discoModeBtn");
 
-// Fetch all the playlist links so users can click them to change tracks
-const playlistLinks = document.querySelectorAll(".playlist a");
-
 // Placeholder for icon links. Makes it easy to update icons in one place.
 const iconLinks = {
   play: "https://img.icons8.com/?size=100&id=9978&format=png&color=F25081", // Play icon
@@ -91,8 +88,46 @@ mediaPlayer.addEventListener("timeupdate", () => {
 });
 
 // Allow users to jump to different parts of the track using the progress bar
-progressSlider.addEventListener("input"),
-  (e) => {
-    const newTime = (e.target.value / 100) * mediaPlayer.duration; // Calculate the new time
-    mediaPlayer.currentTime = newTime; // Set the track to the
-  };
+progressSlider.addEventListener("input", (e) => {
+  const newTime = (e.target.value / 100) * mediaPlayer.duration; // Calculate the new time
+  mediaPlayer.currentTime = newTime; // Set the track to the new time
+});
+
+// Function to generate a random color
+function getRandomColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
+// Disco Mode functionality
+let discoModeOn = false; // State to track if disco mode is active
+let discoInterval = null; // To store the interval function for color changes
+
+// Toggle Disco Mode when the button is clicked
+discoModeBtn.addEventListener("click", () => {
+  discoModeOn = !discoModeOn; // Toggle the disco mode state
+
+  if (discoModeOn) {
+    discoModeBtn.textContent = "Disco Mode: On"; // Change button text
+    startDiscoMode(); // Start disco mode
+  } else {
+    discoModeBtn.textContent = "Disco Mode: Off"; // Change button text
+    stopDiscoMode(); // Stop disco mode
+  }
+});
+
+// Function to start disco mode and change colors every second
+function startDiscoMode() {
+  discoInterval = setInterval(() => {
+    document.body.style.backgroundColor = getRandomColor(); // Change the body background color
+    document.querySelector(".media-player-container").style.backgroundColor =
+      getRandomColor(); // Change player container background
+  }, 1000); // Change color every 1 second
+}
+
+// Function to stop disco mode and reset the background colors
+function stopDiscoMode() {
+  clearInterval(discoInterval); // Stop the color changing
+  document.body.style.backgroundColor = "#1a1a1a"; // Reset body background to original
+  document.querySelector(".media-player-container").style.backgroundColor =
+    "#333"; // Reset player container background
+}
