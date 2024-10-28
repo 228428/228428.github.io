@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Wardrobe</title>
+    <!-- Reset.css to ensure styling is consistent across browsers -->
+    <link rel="stylesheet" href="reset.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="page-title">Mix & Match Outfits</h1>
+
+    <div class="wardrobe-container">
+      <!-- Predefined Clothes Options -->
+      <div class="clothes-options">
+        <h3>Select Your Clothing</h3>
+        <div class="clothing-item">
+          <label>Top:</label>
+          <img
+            src="top.png"
+            class="draggable"
+            id="top"
+            draggable="true"
+            alt="Top"
+          />
+        </div>
+        <div class="clothing-item">
+          <label>Bottom:</label>
+          <img
+            src="bottom.png"
+            class="draggable"
+            id="bottom"
+            draggable="true"
+            alt="Bottom"
+          />
+        </div>
+        <div class="clothing-item">
+          <label>Shoes:</label>
+          <img
+            src="shoes.png"
+            class="draggable"
+            id="shoes"
+            draggable="true"
+            alt="Shoes"
+          />
+        </div>
+      </div>
+
+      <!-- Canvas for drag and drop -->
+      <div id="canvas" class="canvas">
+        <div id="mannequinArea" class="mannequin-area">
+          <img
+            id="mannequinImage"
+            src="defaultbody.png"
+            alt="Mannequin"
+            class="mannequin"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload Container -->
+    <div class="upload-container">
+      <h3>Upload Your Outfits</h3>
+      <input type="file" id="clothesUpload" accept="image/*" />
+      <img
+        id="uploadedClothes"
+        class="hidden"
+        alt="Uploaded clothes"
+        draggable="true"
+      />
+    </div>
+
+    <!-- User Image Upload -->
+    <div class="upload-container">
+      <h3>Or Upload Your Image</h3>
+      <input type="file" id="userUpload" accept="image/*" />
+      <img id="userImage" src="" alt="Your uploaded image" class="hidden" />
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
