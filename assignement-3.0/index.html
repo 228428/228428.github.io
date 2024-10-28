@@ -13,42 +13,24 @@
     <h1 class="page-title">Mix & Match Outfits</h1>
 
     <div class="wardrobe-container">
-      <!-- Predefined Clothes Options -->
+      <!-- Clothing Options -->
       <div class="clothes-options">
         <h3>Select Your Clothing</h3>
         <div class="clothing-item">
           <label>Top:</label>
-          <img
-            src="top.png"
-            class="draggable"
-            id="top"
-            draggable="true"
-            alt="Top"
-          />
+          <img src="top.png" class="draggable" id="top" alt="Top" />
         </div>
         <div class="clothing-item">
           <label>Bottom:</label>
-          <img
-            src="bottom.png"
-            class="draggable"
-            id="bottom"
-            draggable="true"
-            alt="Bottom"
-          />
+          <img src="bottom.png" class="draggable" id="bottom" alt="Bottom" />
         </div>
         <div class="clothing-item">
           <label>Shoes:</label>
-          <img
-            src="shoes.png"
-            class="draggable"
-            id="shoes"
-            draggable="true"
-            alt="Shoes"
-          />
+          <img src="shoes.png" class="draggable" id="shoes" alt="Shoes" />
         </div>
       </div>
 
-      <!-- Canvas for drag and drop -->
+      <!-- Mannequin Area -->
       <div id="canvas" class="canvas">
         <div id="mannequinArea" class="mannequin-area">
           <img
@@ -61,25 +43,6 @@
       </div>
     </div>
 
-    <!-- Upload Container -->
-    <div class="upload-container">
-      <h3>Upload Your Outfits</h3>
-      <input type="file" id="clothesUpload" accept="image/*" />
-      <img
-        id="uploadedClothes"
-        class="hidden"
-        alt="Uploaded clothes"
-        draggable="true"
-      />
-    </div>
-
-    <!-- User Image Upload -->
-    <div class="upload-container">
-      <h3>Or Upload Your Image</h3>
-      <input type="file" id="userUpload" accept="image/*" />
-      <img id="userImage" src="" alt="Your uploaded image" class="hidden" />
-    </div>
-
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
   </body>
 </html>

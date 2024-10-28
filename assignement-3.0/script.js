@@ -1,33 +1,46 @@
-// Allow drop functionality on the canvas
-function allowDrop(event) {
-  event.preventDefault(); // Necessary to allow dropping
+// Function to apply the clothing item to the mannequin
+function applyClothing(itemId) {
+  const mannequin = document.getElementById("mannequinArea");
+  const existingItem = document.getElementById(itemId + "-on-mannequin");
+
+  // If the item is already on the mannequin, remove it
+  if (existingItem) {
+    existingItem.remove();
+  }
+
+  // Clone the clicked item
+  const clothingItem = document.getElementById(itemId).cloneNode(true);
+
+  // Generate a unique ID for the mannequin version
+  clothingItem.id = itemId + "-on-mannequin";
+
+  // Resize the clothing item to make it slightly bigger
+  clothingItem.style.width = "110px"; // Increased the size slightly
+  clothingItem.style.height = "auto"; // Maintain aspect ratio
+  clothingItem.style.position = "absolute";
+
+  // Positioning based on the type of clothing item
+  if (itemId === "top") {
+    // Adjust the position for the top
+    clothingItem.style.top = "160px";
+    clothingItem.style.left = "150px"; // Adjusted position
+  } else if (itemId === "bottom") {
+    // Adjust the position for the bottom
+    clothingItem.style.top = "260px";
+    clothingItem.style.left = "150px"; // Adjusted position
+  } else if (itemId === "shoes") {
+    // Adjust the position for the shoes
+    clothingItem.style.top = "410px";
+    clothingItem.style.left = "170px"; // Adjusted position
+  }
+
+  // Append the item to the mannequin area
+  mannequin.appendChild(clothingItem);
 }
 
-function drag(event) {
-  event.dataTransfer.setData("text", event.target.id); // Set the dragged element's ID
-}
-
-function drop(event) {
-  event.preventDefault(); // Allow the drop
-
-  // Get the ID of the dragged element
-  const data = event.dataTransfer.getData("text");
-  const draggedElement = document.getElementById(data).cloneNode(true);
-
-  // Position the dragged element inside the canvas
-  draggedElement.style.position = "absolute";
-  draggedElement.style.left = `${event.offsetX - draggedElement.width / 2}px`;
-  draggedElement.style.top = `${event.offsetY - draggedElement.height / 2}px`;
-
-  // Append the cloned element to the canvas
-  event.target.appendChild(draggedElement);
-}
-
-// Attach event listeners for drag and drop functionality
-document.getElementById("canvas").addEventListener("dragover", allowDrop);
-document.getElementById("canvas").addEventListener("drop", drop);
-
-// Initialize dragstart event for all draggable items
+// Attach click event to all clothing items
 document.querySelectorAll(".draggable").forEach((item) => {
-  item.addEventListener("dragstart", drag);
+  item.addEventListener("click", function () {
+    applyClothing(item.id);
+  });
 });

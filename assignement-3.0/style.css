@@ -7,30 +7,16 @@ body {
 
 .page-title {
   font-family: "Georgia", serif; /* Elegant font style for the heading */
-  font-size: 48px; /* Larger heading */
+  font-size: 48px; /* Made the heading larger */
   color: #7d8f73; /* Sage green color for the heading */
   margin-bottom: 40px; /* Spacing below the heading */
 }
-
-.upload-container {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #e4dccf; /* Light beige */
-  border-radius: 12px;
-  border: 1px solid #c1b5a7;
-}
-
-#userImage {
-  width: 300px;
-  margin-top: 10px;
-  border-radius: 8px;
-  border: 2px solid #b5c4a3;
-}
-
 .wardrobe-container {
   display: flex;
-  justify-content: center; /* Centered the clothing options and canvas */
+  justify-content: center; /* Align the options and mannequin side by side */
+  align-items: flex-start; /* Align top of both sections */
   margin-top: 30px;
+  gap: 40px; /* Add space between clothes options and mannequin */
 }
 
 .clothes-options {
@@ -40,11 +26,10 @@ body {
   background-color: #f5ede0;
   border-radius: 12px;
   border: 2px solid #b5c4a3;
-  margin-right: 40px; /* Space between the clothing options and canvas */
 }
 
 .clothing-item {
-  margin-bottom: 180px;
+  margin-bottom: 20px;
 }
 
 .clothes-options img {
@@ -57,11 +42,11 @@ body {
 }
 
 .canvas {
-  width: 600px;
-  height: 900px;
+  width: 400px; /* Adjusted width to match content */
+  height: 600px; /* Adjusted height for a better balance */
   border: 2px solid #b5c4a3;
   border-radius: 12px;
-  background-color: #e6eae4; /* Sage tone background */
+  background-color: #e6eae4;
   position: relative;
   padding-top: 20px;
 }
@@ -77,15 +62,4 @@ body {
   height: 100%;
   object-fit: contain;
   position: absolute;
-}
-
-.hidden {
-  display: none;
-}
-
-.draggable {
-  cursor: move;
-  /* Adjust positioning to allow easier dragging */
-  width: 120px;
-  position: relative;
 }
